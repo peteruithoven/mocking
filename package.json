@@ -1,0 +1,25 @@
+{
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "sinon": "npm:sinon@^1.17.1",
+      "systemjs-debugger": "github:peteruithoven/systemjs-debugger@^0.0.3",
+      "tap-dev-tool": "npm:tap-dev-tool@^1.3.0",
+      "tape": "npm:tape@^4.2.1"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
+    }
+  },
+  "name": "jspm-mocking",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
