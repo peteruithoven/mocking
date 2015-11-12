@@ -1,13 +1,14 @@
 import test from 'tape';
-import sinon from 'sinon';
 import 'tap-dev-tool/register';
 
 const COMPONENT = 'randomColor > ';
 
 function setup(randomValue, callback) {
+  // override random.js
   System.set(System.normalizeSync('../src/random.js'), System.newModule({
-    default: sinon.stub().returns(randomValue),
+    default: () => randomValue // return our custom value
   }));
+  // reimport randomColor, pass to callback
   return System.import('../src/randomColor.js').then((module) => {
     let randomColor = module.default;
     callback(randomColor);
